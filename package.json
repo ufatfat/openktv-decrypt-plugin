@@ -1,0 +1,22 @@
+{
+  "name": "openktv-decrypt-plugin",
+  "version": "0.1.0",
+  "description": "Cross-platform QMC v1/v2 decryption plugin and CLI for OpenKTV",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "openktv-decrypt": "./bin/openktv-decrypt.mjs"
+  },
+  "exports": {
+    ".": "./src/qmc-codec.mjs",
+    "./openktv-plugin": "./src/openktv-plugin.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/qmc-codec.mjs && node --check src/openktv-plugin.mjs && node --check bin/openktv-decrypt.mjs"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT"
+}
